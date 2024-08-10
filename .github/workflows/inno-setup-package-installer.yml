@@ -38,9 +38,9 @@ jobs:
 
       - name: Add DLL files
         run: |
-          Copy-Item windows-x64-vc/scripts/windows/x64/msvcp140.dll build/windows/runner/Release/
-          Copy-Item windows-x64-vc/scripts/windows/x64/vcruntime140.dll build/windows/runner/Release/
-          Copy-Item windows-x64-vc/scripts/windows/x64/vcruntime140_1.dll build/windows/runner/Release/
+          Copy-Item windows-x64-vc/msvcp140.dll build/windows/runner/Release/
+          Copy-Item windows-x64-vc/vcruntime140.dll build/windows/runner/Release/
+          Copy-Item windows-x64-vc/vcruntime140_1.dll build/windows/runner/Release/
 
       - name: Building the installer
         run: |
