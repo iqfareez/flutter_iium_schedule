@@ -32,12 +32,9 @@ jobs:
           flutter pub get
           flutter build windows
 
-      - name: Clone vcredist files
+      - name: Add vcredist files tp Release
         run: |
           git clone https://github.com/iiumschedule/vcredist.git windows-x64-vc
-
-      - name: Add DLL files
-        run: |
           Copy-Item windows-x64-vc/msvcp140.dll build/windows/x64/runner/Release/
           Copy-Item windows-x64-vc/vcruntime140.dll build/windows/x64/runner/Release/
           Copy-Item windows-x64-vc/vcruntime140_1.dll build/windows/x64/runner/Release/
